@@ -15,7 +15,7 @@ namespace RedRunner
         public delegate void ResetHandler();
 
         public static event ResetHandler OnReset;
-        public static event ScoreHandler OnScoreChanged;
+        
         public static event AudioEnabledHandler OnAudioEnabled;
 
         private static GameManager m_Singleton;
@@ -26,12 +26,7 @@ namespace RedRunner
             {
                 return m_Singleton;
             }
-        }        
-
-        [SerializeField]        
-        private float m_HighScore = 0f;
-        private float m_LastScore = 0f;
-        private float m_Score = 0f;
+        }                       
 
         private bool m_GameStarted = false;
         private bool m_GameRunning = false;
@@ -77,8 +72,7 @@ namespace RedRunner
                 Destroy(gameObject);
                 return;
             }
-            m_Singleton = this;
-            m_Score = 0f;
+            m_Singleton = this;            
 
         }
 
@@ -96,16 +90,6 @@ namespace RedRunner
 
         IEnumerator DeathCrt()
         {
-            m_LastScore = m_Score;
-            if (m_Score > m_HighScore)
-            {
-                m_HighScore = m_Score;
-            }
-            if (OnScoreChanged != null)
-            {
-                OnScoreChanged(m_Score, m_HighScore, m_LastScore);
-            }
-
             yield return new WaitForSecondsRealtime(1.5f);
 
             EndGame();
@@ -139,10 +123,6 @@ namespace RedRunner
 
         void OnApplicationQuit()
         {
-            if (m_Score > m_HighScore)
-            {
-                m_HighScore = m_Score;
-            }
         }
 
         public void ExitGame()
@@ -191,7 +171,6 @@ namespace RedRunner
 
         public void Reset()
         {
-            m_Score = 0f;
             if (OnReset != null)
             {
                 OnReset();
