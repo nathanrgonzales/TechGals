@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31a8ecfb7865264ea18524ae735e89a, type: 3}
+  m_Name: Cypher4
+  m_EditorClassIdentifier: 
+  keys: []
+  codeDescription: "E esse c\xF3digo, consegue decifrar? Consulte a tabela ASCII!"
+  codeText: "Joan trabalhou na secao conhecida como Hut 8, onde rapidamente se tornou
+    a unica mulher praticar o bamburismo, processo criptoanalitico desenvolvido por
+    Alan Turing que reduziu a necessidade de usar a bomba eletromec\xE2nica, que era
+    usada para decifrar as mensagens da Enigma. Embora Joan tivesse o mesmo cargo
+    de seus colegas homens, ela tinha um salario menor apenas por ser mulher. Sua
+    primeira promocao, de maneira a reconhecer seu trabalho, foi para o nivel de linguista,
+    apenas para que pudesse ganhar mais, mesmo que nao falasse outro idioma."
+  codeType: ASCII
+  nextCypher: {fileID: 11400000, guid: 2f78e797c0ddb3644b05d05aa21eb5a9, type: 2}
