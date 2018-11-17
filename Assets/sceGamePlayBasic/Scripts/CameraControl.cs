@@ -3,9 +3,6 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour
 {
-	public float MoveSpeed = 10f;
-	// How quickly the camera should move from point A to B.
-	public float SnapDistance = 0.25f;
 	// How far from the new position we should be before snapping to it.
 	public Transform MainAxis;
 	// Axis that moves the camera
@@ -14,15 +11,6 @@ public class CameraControl : MonoBehaviour
 
 	// For moving camera
 	public bool IsMoving { get; private set; }
-
-	public bool IsShaking {
-		get {
-			return _isShaking;
-		}
-	}
-
-	private Vector3 _newPosition;
-	private float _currentMoveSpeed;
 
 	// For shaking camera
 	private bool _isShaking = false;
@@ -43,20 +31,6 @@ public class CameraControl : MonoBehaviour
 	
 	void Update ()
 	{
-		// Are we moving?
-		if (IsMoving) {
-			// Move us toward the new position
-			MainAxis.position = Vector3.MoveTowards (MainAxis.position, _newPosition, Time.deltaTime * _currentMoveSpeed);
-
-			// Determine if we are there or not (within snap distance)
-			if (Vector2.Distance (MainAxis.position, _newPosition) < SnapDistance) {
-				MainAxis.position = _newPosition;
-				IsMoving = false;
-				if (!_isShaking)
-					enabled = false;
-			}
-		}
-		// ...or are we shaking? (Could be both)
 		if (_isShaking) {
 			// Move toward the previously determined next shake position
 			ShakeAxis.localPosition = Vector3.MoveTowards (ShakeAxis.localPosition, _nextShakePosition, Time.deltaTime * _shakeSpeed);
@@ -92,30 +66,11 @@ public class CameraControl : MonoBehaviour
 	/// <param name="x">Distance along x axis to move.</param>
 	/// <param name="y">Distance along y axis to move.</param>
 	/// <param name="speed">How quickly to move in specified direction.</param>
-	public void Move (float x, float y, float speed = 0)
-	{
-		// If a speed is passed in, use that. Otherwise use the default.
-		if (speed > 0)
-			_currentMoveSpeed = speed;
-		else
-			_currentMoveSpeed = MoveSpeed;
-
-		// Set us up to move
-		_newPosition = new Vector3 (transform.position.x + x, transform.position.y + y, transform.position.z);
-		IsMoving = true;
-		enabled = true;
-	}
 
 
 	/// <summary>
 	/// Immediately sets the position of the camera
 	/// </summary>
-	public void SetPosition (Vector2 position)
-	{
-		Vector3 newPosition = new Vector3 (position.x, position.y, MainAxis.position.z);
-		MainAxis.position = newPosition;
-	}
-
 
 	/// <summary>
 	/// Shakes the camera. Essentially places some random points around the camera and lerps it to them.
@@ -123,17 +78,6 @@ public class CameraControl : MonoBehaviour
 	/// <param name="intensity">Max distance from the center point the camera will travel.</param>
 	/// <param name="shakes">Total number of random points the camera will travel to.</param>
 	/// <param name="speed">How quickly the camera moves from point to point.</param>
-	public void Shake (float intensity, int shakes, float speed)
-	{
-		enabled = true;
-		_isShaking = true;
-		_shakeCount = shakes;
-		_shakeIntensity = intensity;
-		_shakeSpeed = speed;
-
-		DetermineNextShakePosition ();
-	}
-
 
 	private void DetermineNextShakePosition ()
 	{

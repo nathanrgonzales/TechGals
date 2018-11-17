@@ -5,21 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/sceSplashInicial.unity
     guid: 0002a531631e756408fb25c82e99ab90
   - enabled: 1
     path: Assets/sceMenuPrincipal.unity
     guid: b294c5f2c91abd3428bb5be703d5c135
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/sceSobre.unity
     guid: 17eb985e1bae6bc42bf0d5272ef1c44b
+  - enabled: 1
+    path: Assets/sceSelecionarTela.unity
+    guid: 8025080773054224cbfa93adf0927b69
   - enabled: 1
     path: Assets/Game03.unity
     guid: 400031d4e7e28ce4d9a7ef5b2ef74936

@@ -54,7 +54,7 @@ public class ImitationGame : MonoBehaviour
 
     void ContinueGame()
     {
-        var savedCypher = SaveLoad.Load();
+        var savedCypher = SaveLoad.LoadGameVillas();
         times = savedCypher.times;
         SetCypher(savedCypher);
         scriptCounter.GetComponent<CountTime>().Start();
@@ -121,7 +121,7 @@ public class ImitationGame : MonoBehaviour
         codeDescription.text = cypher.GetCodeDescription();
         codeText.text = cypher.EncodedText();
         paramCypher.times = times;
-        SaveLoad.Save(paramCypher);
+        SaveLoad.SaveGameVillas(paramCypher);
     }
 
     void EndGame()
@@ -140,7 +140,7 @@ public class ImitationGame : MonoBehaviour
     void ExitSave()
     {
         cypher.times = times;
-        SaveLoad.Save(cypher);
+        SaveLoad.SaveGameVillas(cypher);
         scriptCounter.GetComponent<CountTime>().Stop();
         scriptCounter.GetComponent<CountTime>().Reset();
     }
