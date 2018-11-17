@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class scrControllerFases : MonoBehaviour {
 	
+	public int FaseSelecionada;
 	[SerializeField] Sprite imaBtnAtivado;
 	[SerializeField] Sprite imaBtnDesativado;
 	[SerializeField] Button btnFase01;
@@ -48,7 +49,7 @@ public class scrControllerFases : MonoBehaviour {
 				btnFase03.enabled = false;
 			}	
 
-		if (savedSelectStage.FaseHabilitada(4))
+		if (!savedSelectStage.FaseHabilitada(4))
 			{
 				btnFase04.image.sprite = imaBtnAtivado; 
 				btnFase04.GetComponentInChildren<Text>().text = "Fase5" + Environment.NewLine + "04";
@@ -72,5 +73,10 @@ public class scrControllerFases : MonoBehaviour {
 	{
 		SceneManager.LoadScene(nomeCena);
 	}
+
+	public void EscolherFase(int FaseEscolhida)
+	{
+		FaseSelecionada = FaseEscolhida;
+	}	
 
 }
