@@ -79,4 +79,20 @@ public class scrControllerFases : MonoBehaviour {
 		FaseSelecionada = FaseEscolhida;
 	}	
 
+	public void LoadFaseEscolhida()
+	{
+		switch(FaseSelecionada)
+		{
+			case 1:
+				SceneManager.LoadScene("sceMenuPrincipal");
+				break;
+			case 4:
+				SceneManager.LoadScene("sceMenuPrincipal");
+				break;				
+			default:	
+				SceneManager.LoadScene("sceMenuPrincipal");
+				break;
+		}		
+	}	
+
 }

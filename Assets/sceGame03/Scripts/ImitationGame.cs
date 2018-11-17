@@ -74,7 +74,7 @@ public class ImitationGame : MonoBehaviour
             var nextCypher = cypher.GetNextCypher();
             if (nextCypher != null)
             {
-                if (EditorUtility.DisplayDialog("Parabéns!", "Você conseguiu decifrar a mensagem! Clique em Ok para ir ao próximo desafio", "Ok"))
+            /*     if (EditorUtility.DisplayDialog("Parabéns!", "Você conseguiu decifrar a mensagem! Clique em Ok para ir ao próximo desafio", "Ok"))
                 {
                     answerInput.text = "";
                     var time = scriptCounter.GetComponent<CountTime>().GetTime();
@@ -82,6 +82,7 @@ public class ImitationGame : MonoBehaviour
                     scriptCounter.GetComponent<CountTime>().Reset();
                     SetCypher(nextCypher);
                 }
+            */    
             }
             else
             {
@@ -90,7 +91,7 @@ public class ImitationGame : MonoBehaviour
         }
         else
         {
-            EditorUtility.DisplayDialog("Falha!", "Não foi dessa vez! Mas não desista, clique em Ok para continuar tentando", "Ok");
+//            EditorUtility.DisplayDialog("Falha!", "Não foi dessa vez! Mas não desista, clique em Ok para continuar tentando", "Ok");
         }
     }
 
