@@ -90,10 +90,10 @@ public class scrControllerFases : MonoBehaviour {
 				SceneManager.LoadScene("sceGameMendes01");
 				break;
 			case 2:
-				SceneManager.LoadScene("sceGameMendes02");
+				SceneManager.LoadScene("sceGameCastro01");
 				break;									
 			case 3:
-				SceneManager.LoadScene("sceGameCastro01");
+				SceneManager.LoadScene("sceGameMendes02");
 				break;									
 			case 4:
 				SceneManager.LoadScene("sceGameVillas01");
