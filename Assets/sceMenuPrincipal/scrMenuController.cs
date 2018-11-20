@@ -20,12 +20,13 @@ public class scrMenuController : MonoBehaviour {
 
 	public void ApagarTudo()
 	{
-        if (EditorUtility.DisplayDialog("Apagar dados salvos do jogo.",
-                						"Deseja apagar os dados armazenados do jogo?",  
-										"Apagar", 
-										"Não apagar"))
-        {
-			PlayerPrefs.DeleteAll();
-        }		
+		PlayerPrefs.DeleteAll();
+        //if (EditorUtility.DisplayDialog("Apagar dados salvos do jogo.",
+        //        						"Deseja apagar os dados armazenados do jogo?",  
+		//								"Apagar", 
+		//								"Não apagar"))
+        //{
+		//	PlayerPrefs.DeleteAll();
+        //}		
 	}
 }

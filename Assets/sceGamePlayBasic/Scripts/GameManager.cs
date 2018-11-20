@@ -183,8 +183,15 @@ namespace RedRunner
 
         public void ChangeSceneMenuString(string nameScene)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene(nameScene);
         }        
+
+        public void ChangeSceneMenuInt(int numScene)
+        {
+            Time.timeScale = 1f;
+            Application.LoadLevel(numScene);
+        }                
 
         [System.Serializable]
         public class LoadEvent : UnityEvent
