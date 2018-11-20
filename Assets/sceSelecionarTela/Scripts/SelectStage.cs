@@ -7,10 +7,10 @@ using UnityEngine;
 [System.Serializable]
 public class SelectStage : ScriptableObject
 {
-    [SerializeField] bool Fase01;
-    [SerializeField] bool Fase02;
-    [SerializeField] bool Fase03;
-    [SerializeField] bool Fase04;
+    [SerializeField] public bool Fase01;
+    [SerializeField] public bool Fase02;
+    [SerializeField] public bool Fase03;
+    [SerializeField] public bool Fase04;
 
     public bool FaseHabilitada(int FaseAtual)
     {

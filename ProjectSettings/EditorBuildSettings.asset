@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/sceSelecionarTela.unity
     guid: 8025080773054224cbfa93adf0927b69
-  - enabled: 0
-    path: Assets/Game03.unity
-    guid: 400031d4e7e28ce4d9a7ef5b2ef74936
+  - enabled: 1
+    path: Assets/sceGameMendes01.unity
+    guid: 7979fe8d864d5f94a8fae26016d0fa88
   m_configObjects: {}

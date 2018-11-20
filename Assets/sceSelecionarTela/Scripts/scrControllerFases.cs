@@ -23,7 +23,8 @@ public class scrControllerFases : MonoBehaviour {
         var savedSelectStage = SaveLoad.LoadGameSelectStage();
         
 		btnFase01.image.sprite = imaBtnAtivado;
-		if (savedSelectStage.FaseHabilitada(2))
+		//if (savedSelectStage.Fase02 == true)
+		if (PlayerPrefs.GetInt("Fase02") > 00)
 			{
 				btnFase02.image.sprite = imaBtnAtivado; 
 				btnFase02.GetComponentInChildren<Text>().text = "Fase" + Environment.NewLine + "02";
@@ -36,7 +37,8 @@ public class scrControllerFases : MonoBehaviour {
 				btnFase02.enabled = false;
 			}
 
-		if (savedSelectStage.FaseHabilitada(3))
+		//if (savedSelectStage.FaseHabilitada(3))
+		if (PlayerPrefs.GetInt("Fase03") > 00)
 			{
 				btnFase03.image.sprite = imaBtnAtivado; 
 				btnFase03.GetComponentInChildren<Text>().text = "Fase" + Environment.NewLine + "03";
@@ -49,10 +51,11 @@ public class scrControllerFases : MonoBehaviour {
 				btnFase03.enabled = false;
 			}	
 
-		if (!savedSelectStage.FaseHabilitada(4))
+		//if (savedSelectStage.FaseHabilitada(4))
+		if (PlayerPrefs.GetInt("Fase04") > 00)
 			{
 				btnFase04.image.sprite = imaBtnAtivado; 
-				btnFase04.GetComponentInChildren<Text>().text = "Fase5" + Environment.NewLine + "04";
+				btnFase04.GetComponentInChildren<Text>().text = "Fase" + Environment.NewLine + "04";
 				btnFase04.enabled = true;
 			}        
 		else
@@ -84,10 +87,13 @@ public class scrControllerFases : MonoBehaviour {
 		switch(FaseSelecionada)
 		{
 			case 1:
-				SceneManager.LoadScene("sceMenuPrincipal");
+				SceneManager.LoadScene("sceGameMendes01");
 				break;
+			case 2:
+				SceneManager.LoadScene("sceGameVillas01");
+				break;					
 			case 4:
-				SceneManager.LoadScene("sceMenuPrincipal");
+				SceneManager.LoadScene("sceGameVillas01");
 				break;				
 			default:	
 				SceneManager.LoadScene("sceMenuPrincipal");
