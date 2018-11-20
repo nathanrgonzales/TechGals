@@ -10,8 +10,6 @@ namespace RedRunner.UI
         [SerializeField]
         protected Button ResetButton = null;
         [SerializeField]
-        protected Button HomeButton = null;
-        [SerializeField]
         protected Button ExitButton = null;
 
         private void Start()

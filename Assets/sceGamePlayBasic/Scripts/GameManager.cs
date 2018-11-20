@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace RedRunner
 {
@@ -149,6 +150,7 @@ namespace RedRunner
         {
             m_GameStarted = true;
             ResumeGame();
+
         }
 
         public void StopGame()
@@ -177,10 +179,21 @@ namespace RedRunner
             }
         }
 
+        public void ChangeSceneMenuInt()
+        {
+            Application.LoadLevel(3);
+        }
+
+
+        public void ChangeSceneMenuString(string nameScene)
+        {
+            SceneManager.LoadScene(nameScene);
+        }        
+
         [System.Serializable]
         public class LoadEvent : UnityEvent
         {
-
+            
         }
 
     }

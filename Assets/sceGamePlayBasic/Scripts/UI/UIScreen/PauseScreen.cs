@@ -10,8 +10,6 @@ namespace RedRunner.UI
         [SerializeField]
         protected Button ResumeButton = null;
         [SerializeField]
-        protected Button HomeButton = null;
-        [SerializeField]
         protected Button SoundButton = null;
         [SerializeField]
         protected Button ExitButton = null;
@@ -25,10 +23,13 @@ namespace RedRunner.UI
                 GameManager.Singleton.StartGame();
             });
 
-            HomeButton.SetButtonAction(() =>
+            ExitButton.SetButtonAction(() =>
             {
-                GameManager.Singleton.Init();
-            });
+                GameManager.Singleton.Reset();
+                var ingameScreen = UIManager.Singleton.GetUIScreen(UIScreenInfo.IN_GAME_SCREEN);
+                UIManager.Singleton.OpenScreen(ingameScreen);
+                Application.LoadLevel(3);
+            });            
         }
 
         public override void UpdateScreenStatus(bool open)

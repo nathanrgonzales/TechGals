@@ -8,12 +8,7 @@ namespace RedRunner.UI
     public class StartScreen : UIScreen
     {
         [SerializeField]
-        protected Button PlayButton = null;
-        [SerializeField]
-        protected Button HelpButton = null;
-        [SerializeField]
-        protected Button InfoButton = null;     
-        
+        protected Button PlayButton = null;        
 
         private void Start()
         {
