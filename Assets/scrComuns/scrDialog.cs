@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Dialog : MonoBehaviour {
+public class scrDialog : MonoBehaviour {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
     public GameObject continueButton;
+    public GameObject exitButton;
     private int index;
 
     public float typingSpeed;
@@ -38,15 +39,16 @@ public class Dialog : MonoBehaviour {
     public void NextSentence()
     {
         continueButton.SetActive(false);
+        textDisplay.text = "";
+             
         if (index < sentences.Length-1)
-        {
-            index++;
-            textDisplay.text = "";
+        {            
+            index++; 
             StartCoroutine(Type());   
         }
         else
-        {
-            textDisplay.text = "";
+        {    
+            exitButton.SetActive(true);        
             continueButton.SetActive(false);
         }
 

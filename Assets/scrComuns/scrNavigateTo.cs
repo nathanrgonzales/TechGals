@@ -7,9 +7,7 @@ using UnityEditor;
 using UnityEngine.SceneManagement;
 
 
-public class scrNavigateTo : MonoBehaviour {	
-
-	[SerializeField] Button btnVoltar;
+public class scrNavigateTo : MonoBehaviour {		
 
 	public void LoadScene(string nomeCena)
 	{
