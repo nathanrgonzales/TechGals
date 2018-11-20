@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 namespace RedRunner
 {
     public sealed class GameManager : MonoBehaviour
-    {
+    {        
         public delegate void AudioEnabledHandler(bool active);
 
         public delegate void ScoreHandler(float newScore, float highScore, float lastScore);
@@ -18,7 +18,7 @@ namespace RedRunner
         public static event ResetHandler OnReset;
         
         public static event AudioEnabledHandler OnAudioEnabled;
-
+     
         private static GameManager m_Singleton;
 
         public static GameManager Singleton
@@ -31,12 +31,7 @@ namespace RedRunner
 
         private bool m_GameStarted = false;
         private bool m_GameRunning = false;
-        private bool m_AudioEnabled = true;
-
-        /// <summary>
-        /// This is my developed callbacks compoents, because callbacks are so dangerous to use we need something that automate the sub/unsub to functions
-        /// with this in-house developed callbacks feature, we garantee that the callback will be removed when we don't need it.
-        /// </summary>
+        private bool m_AudioEnabled = true;        
         public Property<int> m_Coin = new Property<int>(0);
 
 
@@ -98,6 +93,13 @@ namespace RedRunner
             UIManager.Singleton.OpenScreen(endScreen);
         }
 
+        public void GameOver()
+        {          
+            EndGame();
+            var endScreen = UIManager.Singleton.UISCREENS.Find(el => el.ScreenInfo == UIScreenInfo.END_SCREEN);
+            UIManager.Singleton.OpenScreen(endScreen);
+        }
+
         private void Start()
         {          
             Init();
@@ -111,7 +113,7 @@ namespace RedRunner
         }
 
         void Update()
-        {
+        {   
 
         }
 
@@ -179,12 +181,6 @@ namespace RedRunner
             }
         }
 
-        public void ChangeSceneMenuInt()
-        {
-            Application.LoadLevel(3);
-        }
-
-
         public void ChangeSceneMenuString(string nameScene)
         {
             SceneManager.LoadScene(nameScene);
@@ -195,7 +191,5 @@ namespace RedRunner
         {
             
         }
-
     }
-
 }

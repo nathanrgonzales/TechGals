@@ -27,4 +27,9 @@ public class vitoria : MonoBehaviour {
             Application.LoadLevel(Application.loadedLevel);
         }
     }
+
+    public void ResetLevel()
+    {
+        Application.LoadLevel(Application.loadedLevel);                
+    }
 }

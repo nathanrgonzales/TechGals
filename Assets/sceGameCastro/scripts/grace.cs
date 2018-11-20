@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 public class grace : MonoBehaviour
-{
+{      
     private Vector3 inverteSprite = new Vector3(0,180,0);
     private readonly float velocidade = 3f;
     private bool posicaoDireita = true;   
@@ -16,7 +16,7 @@ public class grace : MonoBehaviour
     private void  Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        localscale = transform.localScale;
+        localscale = transform.localScale;        
     }
 
     private void Update()
