@@ -130,7 +130,10 @@ namespace RedRunner
 
         public void ExitGame()
         {
-            Application.Quit();
+            EndGame();
+            var endScreen = UIManager.Singleton.UISCREENS.Find(el => el.ScreenInfo == UIScreenInfo.END_SCREEN);
+            UIManager.Singleton.OpenScreen(endScreen);            
+            //Application.Quit();
         }
 
         public void ToggleAudioEnabled()
@@ -190,7 +193,7 @@ namespace RedRunner
         public void ChangeSceneMenuInt(int numScene)
         {
             Time.timeScale = 1f;
-            Application.LoadLevel(numScene);
+            Application.LoadLevel(numScene);            
         }                
 
         [System.Serializable]
