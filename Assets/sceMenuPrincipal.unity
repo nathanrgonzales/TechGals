@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156714dd8469589429b52cb243fd981d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnApagarTudo: {fileID: 0}
+  btnApagarTudo: {fileID: 243651093}
 --- !u!4 &563770635
 Transform:
   m_ObjectHideFlags: 0

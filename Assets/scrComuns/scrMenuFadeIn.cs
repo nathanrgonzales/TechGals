@@ -14,20 +14,19 @@ public class scrMenuFadeIn : MonoBehaviour {
 		SplashImage.canvasRenderer.SetAlpha(1.0f);
 		//FadeIn();
 		yield return new WaitForSeconds(1.5f);
-		FadeOut();
-		yield return new WaitForSeconds(2.5f);		
+		FadeOut();		
 		//if (LoadLevel != "") 
 		//	{SceneManager.LoadScene(LoadLevel);}
 	}
 	
 	void FadeIn()
 	{
-		SplashImage.CrossFadeAlpha(1.0f, 2.5f, false);
+		SplashImage.CrossFadeAlpha(1.0f, 1.5f, false);
 	}
 
 	void FadeOut()
 	{
-		SplashImage.CrossFadeAlpha(0.0f, 2.5f, false);
+		SplashImage.CrossFadeAlpha(0.0f, 1.5f, false);
 	}
 	
 }

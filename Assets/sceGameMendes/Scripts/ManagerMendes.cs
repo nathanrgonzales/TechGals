@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ManagerMendes : MonoBehaviour {
 
 	public int moedas = 0;
 	public List<Moeda> listaMoedas;
-	public TextMesh kleberTextMesh;
 	public ParticleSystem firejobs;
-	public TextMesh expectedTextMesh;
+	public Text textoExpected;	
+	public Text textoKleber;		
 	private int expected = 0;
 
 
@@ -25,7 +26,7 @@ public class ManagerMendes : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (kleberTextMesh.text == expectedTextMesh.text)
+		if (textoKleber.text == textoExpected.text)
 		{	
 			PlayerPrefs.SetInt("Fase02", 01);
         	var savedSelectStage = SaveLoad.LoadGameSelectStage();       	
@@ -33,7 +34,7 @@ public class ManagerMendes : MonoBehaviour {
 			savedSelectStage.Fase02 = true;
 			SaveLoad.SaveGameSelectStage(savedSelectStage);
 			LoadScene("sceSelecionarTela");
-		}
+		}			
 
 	}
 
@@ -68,7 +69,7 @@ public class ManagerMendes : MonoBehaviour {
 			firejobs.Stop ();
 		}
 
-		kleberTextMesh.text = "" + bitsEmInteger;
+		textoKleber.text = "" + bitsEmInteger;
 	}
 
 	public void LoadScene(string nomeCena)
@@ -81,7 +82,7 @@ public class ManagerMendes : MonoBehaviour {
 
 		expected = Random.Range (1, 255);
 		print (expected);
-		expectedTextMesh.text = "" + expected;
+		textoExpected.text = "" + expected;
 
 	}
 
