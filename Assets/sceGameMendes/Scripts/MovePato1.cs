@@ -6,10 +6,9 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class MovePato1 : MonoBehaviour {
 
-	private float x = 2.5f;
+	private float x = 3.5f;
 	private SpriteRenderer spriteRenderer;
-	Transform currentItem = null;
-	public Transform carryLocation;
+		
 	private Collider2D playerInTrigger;
 	public Button esquerdaBtn;
 	public Button direitaBtn;

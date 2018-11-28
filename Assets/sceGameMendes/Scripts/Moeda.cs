@@ -65,4 +65,12 @@ public class Moeda : MonoBehaviour {
 			labelTextMesh.text = "1";
 		}
 	}
+
+	public void ZerarMoeda() 
+	{		
+		on = false;
+		spriteRenderer.sprite = moedaOff;
+		labelTextMesh.text = "0";
+		
+	}	
 }

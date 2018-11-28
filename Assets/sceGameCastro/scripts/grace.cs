@@ -10,6 +10,7 @@ public class grace : MonoBehaviour
     private Rigidbody2D rb;
     private float dirx;
     private Vector3 localscale;
+    public float fatorPulo;
 
 
 
@@ -65,7 +66,7 @@ public class grace : MonoBehaviour
         
         if (CrossPlatformInputManager.GetButtonDown("Jump") && rb.velocity.y == 0)
         {
-            rb.AddForce(Vector2.up * 700f);
+            rb.AddForce(Vector2.up * fatorPulo);
         }
 
     }
