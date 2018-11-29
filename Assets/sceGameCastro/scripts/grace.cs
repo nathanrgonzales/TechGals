@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 public class grace : MonoBehaviour
 {      
@@ -12,22 +13,39 @@ public class grace : MonoBehaviour
     private Vector3 localscale;
     public float fatorPulo;
 
+    public Button esquerdaBtn;
+	public Button direitaBtn;
+	public Animator animator;
+    private SpriteRenderer spriteRenderer;
 
 
     private void  Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        localscale = transform.localScale;        
+        localscale = transform.localScale;     
+		spriteRenderer = GetComponent<SpriteRenderer> ();
+		animator = GetComponent<Animator> ();           
     }
 
     private void Update()
     {
         dirx = CrossPlatformInputManager.GetAxis("Horizontal") * velocidade;
+        this.MoverCima();
         
-
-       this.MoverCima();
-
-
+        
+        animator.SetBool("andando", false);            
+        
+        if (dirx>0)
+        {          
+            spriteRenderer.flipX = false;			
+			animator.SetBool("andando", true);            
+        }
+        
+        if (dirx<0)
+        {   
+			spriteRenderer.flipX = true;			
+			animator.SetBool("andando", true);                        
+        }        
     }
 
     private void FixedUpdate()
@@ -36,19 +54,7 @@ public class grace : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (dirx>0 && !posicaoDireita)
-        {
-          
-            posicaoDireita = true;
-            transform.Rotate(inverteSprite);
 
-        }
-        else if (dirx < 0 && posicaoDireita)
-        {
-            
-            posicaoDireita = false;
-            transform.Rotate(inverteSprite);
-        }
        
     }
     private void Movimento()

@@ -24,17 +24,17 @@ public class MovePato1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		animator.SetBool("Andando", false);
+		animator.SetBool("andando", false);
 		if (Input.GetKey(KeyCode.RightArrow) || direitaBtn.GetComponent<ButtonModafoca>().pressed){
 			spriteRenderer.flipX = false;
 			transform.Translate(new Vector3(x * Time.deltaTime, 0, 0));
-			animator.SetBool("Andando", true);
+			animator.SetBool("andando", true);
 		}
 		if (Input.GetKey(KeyCode.LeftArrow) || esquerdaBtn.GetComponent<ButtonModafoca>().pressed ) {
 
 			spriteRenderer.flipX = true;
 			transform.Translate(new Vector3(-x * Time.deltaTime, 0, 0));
-			animator.SetBool("Andando", true);
+			animator.SetBool("andando", true);
 		}
 			
 	}

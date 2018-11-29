@@ -91,11 +91,8 @@ public class enemy : MonoBehaviour {
         if (other.gameObject.tag == "Grace")
         {
             
-            gameObject.transform.parent.gameObject.SetActive(false);
+            //gameObject.transform.parent.gameObject.SetActive(false);
         }
-
-
-
     }
 
 }

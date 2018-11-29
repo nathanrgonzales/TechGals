@@ -21,10 +21,6 @@ public class scrControllerFases : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         var savedSelectStage = SaveLoad.LoadGameSelectStage();
-        
-		PlayerPrefs.SetInt("Fase02",01);
-		PlayerPrefs.SetInt("Fase03",01);
-		PlayerPrefs.SetInt("Fase04",01);
 
 		btnFase01.image.sprite = imaBtnAtivado;
 		//if (savedSelectStage.Fase02 == true)

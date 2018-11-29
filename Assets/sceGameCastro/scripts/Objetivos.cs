@@ -21,12 +21,12 @@ public class Objetivos : MonoBehaviour {
     {
         if (other.gameObject.tag == "Grace")
         {
-            if (objetivo.name == "pergaminho")
+            if (objetivo.name == "Pergaminho")
             {
                 objetivo.SetActive(false);
                 ponte.SetActive(true);
             }
-            if (objetivo.name == "pc" & !pergaminho.active)
+            if (objetivo.name == "PC" & !pergaminho.active)
             {
                 objetivo.SetActive(false);
             }

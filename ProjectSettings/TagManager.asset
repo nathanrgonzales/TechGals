@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bug1
+  - Grace
+  - Bug2
+  - chao
+  - moeda
+  - pato
+  - textEndGame
   layers:
   - Default
   - TransparentFX

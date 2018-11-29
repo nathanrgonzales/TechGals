@@ -10,7 +10,7 @@ public class scrMenuController : MonoBehaviour {
 	[SerializeField] Button btnApagarTudo;
 
 	void Start () {
-		
+		Time.timeScale = 1f;		
 	}
 	
 	// Update is called once per frame

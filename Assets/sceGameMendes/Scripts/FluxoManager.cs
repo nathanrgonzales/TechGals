@@ -13,8 +13,6 @@ public class FluxoManager : MonoBehaviour {
 
 		blocos = GameObject.FindGameObjectsWithTag("bloco");
 		destinos = GameObject.FindGameObjectsWithTag("destino");
-		print (blocos.Length);
-
 		
 	}
 	
