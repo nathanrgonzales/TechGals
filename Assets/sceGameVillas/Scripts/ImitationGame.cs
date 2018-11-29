@@ -59,8 +59,7 @@ public class ImitationGame : MonoBehaviour
     void StartGame()
     {
         SetCypher(Resources.Load<Cypher>("Cypher/Cypher1"));
-        scriptCounter.gameObject.GetComponent<Text>().text = "0";
-        
+        scriptCounter.gameObject.GetComponent<Text>().text = "0";        
     }
 
     void ContinueGame()
@@ -118,7 +117,7 @@ public class ImitationGame : MonoBehaviour
         }
         else
         {
-            EditorUtility.DisplayDialog("Falha!", "Não foi dessa vez! Mas não desista, clique em Ok para continuar tentando", "Ok");
+            //EditorUtility.DisplayDialog("Falha!", "Não foi dessa vez! Mas não desista, clique em Ok para continuar tentando", "Ok");
         }
     }
 
