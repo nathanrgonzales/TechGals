@@ -7,14 +7,22 @@ using UnityEditor;
 
 public class ImitationGame : MonoBehaviour
 {
+
+	public Image PlacarStar;
+	public Sprite Star00;
+	public Sprite Star01;
+	public Sprite Star02;
+	public Sprite Star03;
+    public GameObject Jogo;    
+
+    private int NivelAtual;
+
     [SerializeField] Text codeDescription;
     [SerializeField] Text codeText;
     [SerializeField] Text teste1;
     [SerializeField] Text teste2;
     [SerializeField] Text teste3;
-    [SerializeField] Text teste4;
-    [SerializeField] Text teste5;
-    [SerializeField] Text teste6;
+
     [SerializeField] InputField decodeInput;
     [SerializeField] InputField answerInput;
     [SerializeField] Button checkAnswerButton;
@@ -37,6 +45,9 @@ public class ImitationGame : MonoBehaviour
         //exitSaveButton.onClick.AddListener(ExitSave);
 
         CheckIfSavedDataExists();
+
+        PlacarStar.sprite = Star00;
+        NivelAtual = 00;
     }
 
     // Update is called once per frame
@@ -71,27 +82,43 @@ public class ImitationGame : MonoBehaviour
     {
         if (cypher.CheckAnswer(answerInput.text))
         {
-            var nextCypher = cypher.GetNextCypher();
-            if (nextCypher != null)
+            NivelAtual = NivelAtual + 1;
+			if (NivelAtual == 1) {PlacarStar.sprite = Star01;}
+			if (NivelAtual == 2) {PlacarStar.sprite = Star02;}		            
+            if (NivelAtual == 3) {PlacarStar.sprite = Star03;}	
+
+            if (NivelAtual <= 2)  	                
             {
-            /*     if (EditorUtility.DisplayDialog("Parabéns!", "Você conseguiu decifrar a mensagem! Clique em Ok para ir ao próximo desafio", "Ok"))
+
+                var nextCypher = cypher.GetNextCypher();
+                
+                if (nextCypher != null)
                 {
                     answerInput.text = "";
                     var time = scriptCounter.GetComponent<CountTime>().GetTime();
                     times.Add(time);
                     scriptCounter.GetComponent<CountTime>().Reset();
                     SetCypher(nextCypher);
+
+                /*     if (EditorUtility.DisplayDialog("Parabéns!", "Você conseguiu decifrar a mensagem! Clique em Ok para ir ao próximo desafio", "Ok"))
+                    {
+                        answerInput.text = "";
+                        var time = scriptCounter.GetComponent<CountTime>().GetTime();
+                        times.Add(time);
+                        scriptCounter.GetComponent<CountTime>().Reset();
+                        SetCypher(nextCypher);
+                    }
+                */    
                 }
-            */    
             }
-            else
+            if (NivelAtual >= 3)
             {
                 EndGame();
             }
         }
         else
         {
-//            EditorUtility.DisplayDialog("Falha!", "Não foi dessa vez! Mas não desista, clique em Ok para continuar tentando", "Ok");
+            EditorUtility.DisplayDialog("Falha!", "Não foi dessa vez! Mas não desista, clique em Ok para continuar tentando", "Ok");
         }
     }
 
@@ -127,15 +154,15 @@ public class ImitationGame : MonoBehaviour
 
     void EndGame()
     {
-        var time = scriptCounter.GetComponent<CountTime>().GetTime();
-        times.Add(time);
+        PlayerPrefs.SetInt("Fase03", 01);
+        var Teste = Jogo.GetComponent<RedRunner.GameManager>();
+        Teste.ExitGame();
 
+        /* var time = scriptCounter.GetComponent<CountTime>().GetTime();
+        times.Add(time);
         teste1.text = "Teste 1: " + cypher.times[0] + " segundos.";
         teste2.text = "Teste 2: " + cypher.times[1] + " segundos.";
-        teste3.text = "Teste 3: " + cypher.times[2] + " segundos.";
-        teste4.text = "Teste 4: " + cypher.times[3] + " segundos.";
-        teste5.text = "Teste 5: " + cypher.times[4] + " segundos.";
-        teste6.text = "Teste 6: " + cypher.times[5] + " segundos.";
+        teste3.text = "Teste 3: " + cypher.times[2] + " segundos.";*/
     }
 
     void ExitSave()

@@ -88,11 +88,10 @@ MonoBehaviour:
     Z = A, + = 1, ~ = 0. Coloque o resultado no espa\xE7o abaixo, e tente descobrir
     o c\xF3digo sem usar a ferramenta de decodifica\xE7\xE3o para cada letra. Boa
     Sorte!"
-  codeText: Joan Elisabeth Lowther Murray, OBE (Londres, 24 de junho de 1917 - Oxford,
-    4 de setembro de 1996) foi uma criptoanalista e numismatista britanica, conhecida
-    por seu trabalho na Segunda Guerra Mundial, quebrando codigos inimigos na instalacao
-    de Bletchley Park. Teve importante papel no Projeto Enigma, que decodificou as
-    comunicacoes secretas da Alemanha Nazista, trabalho pelo qual foi indicada como
-    membro da Ordem do Imperio Britanico.
+  codeText: Joan Elisabeth Lowther Murray foi uma criptoanalista e numismatista, conhecida
+    por quebrar codigos inimigos na Segunda Guerra Mundial. Teve grande papel no Projeto
+    Enigma, que decodificou as comunicacoes secretas da Alemanha Nazista, trabalho
+    pelo qual foi indicada como membro da Ordem do Imperio Britanico.
   codeType: Array
   nextCypher: {fileID: 11400000, guid: d010c96f24d78a2479ba109b6beaf7c8, type: 2}
+  times: 

@@ -68,13 +68,9 @@ MonoBehaviour:
     value: '10 '
   codeDescription: "Voc\xEA consegue decifrar esse c\xF3digo? Aqui est\xE1 a dica:
     11 = A, 10 = Z."
-  codeText: Sua grande habilidade com os numeros foi crucial para sua entrada na Escola
-    de Codificacao e Codigos do Governo (GCCS). As operacoes da GCCS comecaram em
-    1939 com apenas um proposito, o de quebrar o Enigma, que era uma maquina inventada
-    pelos alemaes para codificar suas mensagens, que eles consideravam indecifraveis.
-    Joan chegou a Bletchley Park em 17 de junho de 1940 e foi primeiramente alocada
-    em um grupo so de mulheres, conhecidos como "As Garotas", que faziam apenas trabalho
-    de rotina. Nesta epoca, criptologia nao era considerado um trabalho de mulher.
+  codeText: Parabens, voce resolveu o enigma final! Agora os alemaes nao conseguirao
+    mais mandar mensagens sem que os Aliados saibam. Joan Clarke e Alan Turing estariam
+    orgulhosos!
   codeType: Array
   nextCypher: {fileID: 11400000, guid: c05036dec80d5be4a82d699d47fdfb0c, type: 2}
-  times: 
+  times: 050000000a000000

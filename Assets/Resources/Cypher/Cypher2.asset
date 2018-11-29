@@ -14,10 +14,9 @@ MonoBehaviour:
   keys: []
   codeDescription: "N\xE3o precisa do decodificador agora. Apenas pegue cada terceiro
     caracter!"
-  codeText: Joan nasceu na cidade de Londres, em 1917. Ganhou uma bolsa de estudos
-    em 1936 para o Newnham College, na Universidade de Cambridge, onde se formou como
-    primeira da classe em matematica. Porem, o titulo pleno de matematica lhe foi
-    negado por Cambridge so os dava a homens ate 1948.
+  codeText: Joan ganhou uma bolsa de estudos em 1936 para o Newnham College, na Universidade
+    de Cambridge, onde se formou como primeira da classe em matematica. Porem, o titulo
+    pleno de matematica lhe foi negado por Cambridge so os dava a homens ate 1948.
   codeType: ThirdLetter
   nextCypher: {fileID: 11400000, guid: 706119339549c2049af579f271455801, type: 2}
   times: 

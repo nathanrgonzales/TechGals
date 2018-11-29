@@ -12,8 +12,7 @@ public class FluxoManager : MonoBehaviour {
 	void Start () {
 
 		blocos = GameObject.FindGameObjectsWithTag("bloco");
-		destinos = GameObject.FindGameObjectsWithTag("destino");
-		
+		destinos = GameObject.FindGameObjectsWithTag("destino");		
 	}
 	
 	// Update is called once per frame

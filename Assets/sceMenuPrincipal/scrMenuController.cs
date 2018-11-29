@@ -12,11 +12,6 @@ public class scrMenuController : MonoBehaviour {
 	void Start () {
 		Time.timeScale = 1f;		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void ApagarTudo()
 	{

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/sceGameVillas01.unity
     guid: 73355a6331d36d84983504ff818a020f
+  - enabled: 1
+    path: Assets/sceGameIntro.unity
+    guid: df153cf5599be0c4198eb6c6f9dd2d8f
   m_configObjects: {}
