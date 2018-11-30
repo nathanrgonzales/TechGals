@@ -30,6 +30,8 @@ public class scrControllerFases : MonoBehaviour {
 	void Start () {
         var savedSelectStage = SaveLoad.LoadGameSelectStage();
 
+		Time.timeScale = 1.0f;
+
 		btnFase01.image.sprite = imaBtnAtivado;
 		//if (savedSelectStage.Fase02 == true)
 
