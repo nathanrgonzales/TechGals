@@ -142,16 +142,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 1075742212}
   sentences:
-  - "O mundo \xE9 um "
-  - Teste 01
-  - Teste 01
-  - Teste 01
-  - Teste 01
-  - Teste 01
-  - Teste 01
-  - Teste 01
-  - Teste 01
-  - Teste 01
+  - "Solange \xE9 uma estudante do primeiro ano do curso superior de An\xE1lise de
+    Sistemas, na FATEC S\xE3o Paulo. Nas primeiras semanas de aula, ela percebeu que
+    tem muito poucas mulheres inscritas no mesmo curso que ela.  "
+  - " Esse fato despertou sua curiosidade, ent\xE3o ela foi na biblioteca estudar
+    o trabalho de mulheres na \xE1rea de Inform\xE1tica. Mas algo muito estranho aconteceu
+    na biblioteca."
+  - "Durante seus estudos, a luz acabou e tudo come\xE7ou a girar! Quando conseguiu
+    ver algo novamente, percebeu que estava numa esp\xE9cie de buraco interdimensional. "
+  - "A linha do tempo esta com alguns problemas! Solange precisa viajar no tempo e
+    conhecer alguns dos grandes trabalhos de algumas mulheres no mundo da tecnologia,
+    e ajudar a conseguir resolver os quebra-cabe\xE7as e poder voltar para o presente."
+  - "Solange precisa se apressar, pois o tempo esta passando e ela esta na semana
+    de provas na FATEC! Volte a tempo para n\xE3o pegar DP!!!"
+  - Vamos nessa!
   continueButton: {fileID: 1906812446}
   exitButton: {fileID: 1130729594}
   typingSpeed: 0.02
@@ -563,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1385821342
 SpriteRenderer:
   m_ObjectHideFlags: 0

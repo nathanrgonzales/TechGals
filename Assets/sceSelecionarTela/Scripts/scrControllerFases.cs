@@ -115,19 +115,19 @@ public class scrControllerFases : MonoBehaviour {
 
 			case 01:
 				texto01.text = 	"Fase 01: Resolvendo binários" + "\n" +
-								"Ajude Solange a resolver os casos de números binários e conheça um pouco mais do trabalho de <nome da novinha>";
+								"Ajude Solange a resolver os casos de números binários";
 				break;
 			case 02:
 				texto01.text = 	"Fase 02: Fuja do Bugs" + "\n" +
-								"Ajude Solange a resolver os casos de números binários e conheça um pouco mais do trabalho de <nome da novinha>";
+								"Solange precisa pegar o código-fonte para poder passar dos bugs! Cuidado com os bugs!!!";
 				break;
 			case 03:
 				texto01.text = 	"Fase 03: Criptografia de mensagens" + "\n" +
-								"Ajude Solange a resolver os casos de números binários e conheça um pouco mais do trabalho de <nome da novinha>";
+								"Mensagem com criptografia! Solange precisa descobrir a chave para quebrar o código e ler a mensagem.";
 				break;
 			case 04:
 				texto01.text = 	"Fase 04: Fluxos" + "\n" +
-								"Ajude Solange a resolver os casos de números binários e conheça um pouco mais do trabalho de <nome da novinha>";
+								"Solange precisa organizar os fluxos para que tudo funcione! ";
 				break;
 			
 			default:

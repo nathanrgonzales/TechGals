@@ -50,6 +50,7 @@ public class scrDialogIntro : MonoBehaviour {
         {    
             exitButton.SetActive(true);        
             continueButton.SetActive(false);
+            PlayerPrefs.SetInt("Fase01", 01);
         }
 
     }
