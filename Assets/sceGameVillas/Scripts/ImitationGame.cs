@@ -153,7 +153,7 @@ public class ImitationGame : MonoBehaviour
 
     void EndGame()
     {
-        PlayerPrefs.SetInt("Fase03", 01);
+        PlayerPrefs.SetInt("Fase04", 01);
         var Teste = Jogo.GetComponent<RedRunner.GameManager>();
         Teste.ExitGame();
 
