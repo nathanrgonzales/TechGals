@@ -12,6 +12,10 @@ TagManager:
   - pato
   - textEndGame
   - Solange
+  - madeira
+  - bloco
+  - destino
+  - GameMendes01
   layers:
   - Default
   - TransparentFX

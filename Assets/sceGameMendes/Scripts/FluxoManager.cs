@@ -17,7 +17,7 @@ public class FluxoManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		int numeroCarasTocando = 0;
+		/* int numeroCarasTocando = 0;
 		for(int i = 0; i < blocos.Length; i++){
 			var circleCollider2D = blocos [i].GetComponent<CircleCollider2D> ();
 			var boxCollider2D = destinos [i].GetComponent<BoxCollider2D> ();
@@ -28,7 +28,7 @@ public class FluxoManager : MonoBehaviour {
 
 		if (numeroCarasTocando == blocos.Length) {
 			print ("AEEEEE PORRA");
-		}
+		}*/
 	}
 		
 }

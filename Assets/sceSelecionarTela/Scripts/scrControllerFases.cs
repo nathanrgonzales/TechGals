@@ -34,6 +34,7 @@ public class scrControllerFases : MonoBehaviour {
 
 		btnFase01.image.sprite = imaBtnAtivado;
 		//if (savedSelectStage.Fase02 == true)
+		PlayerPrefs.SetInt("Fase04", 01);
 
 		if (PlayerPrefs.GetInt("Fase01") > 00)
 			{
