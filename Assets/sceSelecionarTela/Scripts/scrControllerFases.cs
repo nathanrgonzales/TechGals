@@ -25,16 +25,12 @@ public class scrControllerFases : MonoBehaviour {
 	[SerializeField] Button btnVoltar;
 
 	[SerializeField] TextMeshProUGUI texto01;
-
-	// Use this for initialization
+	
 	void Start () {
+
         var savedSelectStage = SaveLoad.LoadGameSelectStage();
-
 		Time.timeScale = 1.0f;
-
-		btnFase01.image.sprite = imaBtnAtivado;
-		//if (savedSelectStage.Fase02 == true)
-		PlayerPrefs.SetInt("Fase04", 01);
+		btnFase01.image.sprite = imaBtnAtivado;		
 
 		if (PlayerPrefs.GetInt("Fase01") > 00)
 			{
@@ -62,7 +58,6 @@ public class scrControllerFases : MonoBehaviour {
 				btnFase02.enabled = false;
 			}
 
-		//if (savedSelectStage.FaseHabilitada(3))
 		if (PlayerPrefs.GetInt("Fase03") > 00)
 			{
 				btnFase03.image.sprite = imaBtnAtivado; 
@@ -75,8 +70,7 @@ public class scrControllerFases : MonoBehaviour {
 				btnFase03.GetComponentInChildren<Text>().text = "";
 				btnFase03.enabled = false;
 			}	
-
-		//if (savedSelectStage.FaseHabilitada(4))
+		
 		if (PlayerPrefs.GetInt("Fase04") > 00)
 			{
 				btnFase04.image.sprite = imaBtnAtivado; 
@@ -92,11 +86,6 @@ public class scrControllerFases : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public void LoadScene(string nomeCena)
 	{
 		SceneManager.LoadScene(nomeCena);

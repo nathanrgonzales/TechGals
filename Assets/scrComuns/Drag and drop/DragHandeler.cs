@@ -2,33 +2,30 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
+public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler {
 	public static GameObject itemBeingDragged;
 	public Vector3 startPosition;
 	public Transform startParent;
 
-	#region IBeginDragHandler implementation
-
 	public void OnBeginDrag (PointerEventData eventData)	
 	{
-		startPosition = transform.position;	
+		//startPosition = transform.position;	
 		startParent = transform.parent;
 		itemBeingDragged = this.gameObject;
 		GetComponent<CanvasGroup>().blocksRaycasts = false;
 	}
 
-	#endregion
-
-	#region IDragHandler implementation
+    public void OnPointerEnter(PointerEventData pointerEventData)
+    {
+        //Output to console the GameObject's name and the following message
+		startPosition = transform.position;	
+        //Debug.Log("Cursor Entering " + name + " GameObject");
+    }	
 
 	public void OnDrag (PointerEventData eventData)
 	{
 		//transform.position = eventData.position;
 	}
-
-	#endregion
-
-	#region IEndDragHandler implementation
 
 	public void OnEndDrag (PointerEventData eventData)	
 	{
@@ -39,9 +36,5 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 			transform.SetParent (startParent);
 		}
 	}
-
-	#endregion
-
-
 
 }

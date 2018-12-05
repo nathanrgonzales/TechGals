@@ -26,4 +26,9 @@ public class UIManager : MonoBehaviour {
 	{
 		SceneManager.LoadScene(nomeCena);
 	}
+
+	public void QuitGame()
+	{
+		Application.Quit();		
+	}	
 }

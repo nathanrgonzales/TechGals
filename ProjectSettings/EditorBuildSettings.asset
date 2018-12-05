@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/sceSelecionarTela.unity
     guid: 8025080773054224cbfa93adf0927b69
   - enabled: 1
+    path: Assets/sceGameIntro.unity
+    guid: df153cf5599be0c4198eb6c6f9dd2d8f
+  - enabled: 1
     path: Assets/sceGameMendes01.unity
     guid: 7979fe8d864d5f94a8fae26016d0fa88
   - enabled: 1
@@ -30,6 +33,6 @@ EditorBuildSettings:
     path: Assets/sceGameMendes02.unity
     guid: 83cb3b8eb56f6c1408e5142c7706c3f8
   - enabled: 1
-    path: Assets/sceGameIntro.unity
-    guid: df153cf5599be0c4198eb6c6f9dd2d8f
+    path: Assets/sceGameCreditos.unity
+    guid: cd53caf2e419b4443a582f3cc706d217
   m_configObjects: {}
