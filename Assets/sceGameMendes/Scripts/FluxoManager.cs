@@ -29,9 +29,10 @@ public class FluxoManager : MonoBehaviour {
 	
 	void VerificarFase()
 	{
-		if (NivelAtual == 1) {PlacarStar.sprite = Star01;}
-		if (NivelAtual == 2) {PlacarStar.sprite = Star02;}				
-		if (NivelAtual == 3) {PlacarStar.sprite = Star03;}				
+		if (NivelAtual == 1) {PlacarStar.sprite = Star00;}
+		if (NivelAtual == 2) {PlacarStar.sprite = Star01;}				
+		if (NivelAtual == 3) {PlacarStar.sprite = Star02;}				
+		if (NivelAtual >  3) {PlacarStar.sprite = Star03;}						
 
 		switch(NivelAtual)
 		{
