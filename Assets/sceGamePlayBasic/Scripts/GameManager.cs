@@ -135,6 +135,11 @@ namespace RedRunner
             UIManager.Singleton.OpenScreen(endScreen);            
             //Application.Quit();
         }
+		
+        public void ResetSemMenu()
+        {
+			//desenvolver re-início de partida mais rápido
+        }		
 
         public void ToggleAudioEnabled()
         {
