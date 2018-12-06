@@ -15,6 +15,7 @@ public class scrDialogIntro : MonoBehaviour {
 
 	IEnumerator Start()
 	{		
+        Time.timeScale = 1f;		
 		yield return new WaitForSeconds(2.5f);        
         StartCoroutine(Type());                      
 	}    
