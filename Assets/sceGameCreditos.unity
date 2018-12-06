@@ -153,10 +153,7 @@ MonoBehaviour:
     ainda mais."
   - "Motivada, Solange vai falar para seus amigos sobre o que aprendeu nessa aventura
     temporal e como as mulheres foram e s\xE3o importantes para a tecnologia."
-  - "At\xE9 mais!"
-  - "At\xE9 mais!"
-  - "At\xE9 mais!"
-  - "At\xE9 mais!"
+  - Obrigado por jogar Tech Gals!
   continueButton: {fileID: 1906812446}
   exitButton: {fileID: 1130729594}
   typingSpeed: 0.02
